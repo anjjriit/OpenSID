@@ -25,13 +25,13 @@
 <?php endif; ?>
 
 	<td style="background:#fff;padding:0px;">
-		<div class="content">
-			<h3>Dokumen: <?php echo $kat_nama?></h3>
-		</div>
 <div id="contentpane">
 	<form id="mainform" name="mainform" action="" method="post">
 		<input name="kategori" type="hidden" value="<?php echo $kat?>">
     <div class="ui-layout-north panel">
+				<div class="content">
+					<h3>Dokumen: <?php echo $kat_nama?></h3>
+				</div>
         <div class="left">
             <div class="uibutton-group">
                 <a href='<?php echo site_url("{$this->controller}/form/$kat")?>' class="uibutton tipsy south" title="Tambah Data" ><span class="fa fa-plus-square">&nbsp;</span>Tambah Dokumen Baru</a>
@@ -131,7 +131,7 @@
     <div class="ui-layout-south panel bottom">
         <div class="left">
 		<div class="table-info">
-          <form id="paging" action="<?php echo site_url($this->controller)?>" method="post">
+          <form id="paging" action="<?php echo site_url($this->controller.'/index/'.$kat)?>" method="post">
 		  <label>Tampilkan</label>
             <select name="per_page" onchange="$('#paging').submit()" >
               <option value="20" <?php  selected($per_page,20); ?> >20</option>
