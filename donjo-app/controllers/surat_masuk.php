@@ -70,7 +70,7 @@ class surat_masuk extends CI_Controller{
 
 		$this->load->view('header', $header);
 		$nav['act']=$this->tab_ini;
-		$this->load->view('surat/nav',$nav);
+		$this->load->view('sekretariat/nav',$nav);
 		$this->load->view('surat_masuk/form',$data);
 		$this->load->view('footer');
 	}
